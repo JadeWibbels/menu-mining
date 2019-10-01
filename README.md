@@ -24,7 +24,7 @@ Can we find foods/techniques that have low negative impacts and offer replacemen
 
   ### Preprocessing:
     - Recipes: combining multiple data sets, cleaning and gathering important characteristics
-    - Countries: clean for illness/mortality that can be tied to food specifically, verifying we have enough countries with recipes to be meaningful
+    - Countries: clean for illness/mortality that can be tied to food specifically, verifying we have enough countries with recipes to be meaningful, combine over multiple years to try to mitigate potential globalization impact(?)
     
   ### Data Mining
    1) Organize recipes with: Ingredients (including quantity), Cooking Instructions, Nationality (will use classification)
