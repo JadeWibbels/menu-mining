@@ -16,14 +16,17 @@ WHO data https://www.who.int/healthinfo/global_burden_disease/estimates/en/index
 Mortality/illness have been linked to diet world wide. (ex: https://www.thelancet.com/article/S0140-6736(19)30041-8/fulltext) Can we narrow it down by looking at 
   - types of food: what are the most common foods linked to diseases across countries
   - quantities of food: how many national recipes include these ingredients, how many different types of food are common in the cooking, how much of a specific food is in a recipe eg # of eggs
-  - cooking style: frying, baking, grilling, but also marinating, temperature
+  - cooking style: frying, baking, grilling, but also marinating, temperature, peeled vs skins, vegetarian vs omnivorous etc etc etc 
 
 Can we find foods/techniques that have low negative impacts and offer replacements by comparing similarly used ingredients?
 
-Steps:
+### Steps:
    1) Organize recipes with: Ingredients (including quantity), Cooking Instructions, Nationality (will use classification)
    2) Organize Countries with population, illnesses, Cause of Death, Imports and Exports
    3) Look for links between high occurances of foods or cooking types, heats etc with certain illnesses
    4) Look for potential low risk replacement foods/processes by finding similar types of recipes with different ingredients.
-
-
+   
+### Tools:
+  1) NLP classification: region
+  2) Unsupervised clustering based on illness and recipe component
+  3) Unsupervised clustering based on recipes to locate replacement ingredients or techniques
