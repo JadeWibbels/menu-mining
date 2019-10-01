@@ -20,13 +20,19 @@ Mortality/illness have been linked to diet world wide. (ex: https://www.thelance
 
 Can we find foods/techniques that have low negative impacts and offer replacements by comparing similarly used ingredients?
 
-### Steps:
+## Steps:
+
+  ### Preprocessing:
+    - Recipes: combining multiple data sets, cleaning and gathering important characteristics
+    - Countries: clean for illness/mortality that can be tied to food specifically, verifying we have enough countries with recipes to be meaningful
+    
+  ### Data Mining
    1) Organize recipes with: Ingredients (including quantity), Cooking Instructions, Nationality (will use classification)
    2) Organize Countries with population, illnesses, Cause of Death, Imports and Exports
    3) Look for links between high occurances of foods or cooking types, heats etc with certain illnesses
    4) Look for potential low risk replacement foods/processes by finding similar types of recipes with different ingredients.
    
-### Tools:
+## Tools:
   1) NLP classification: region
   2) Unsupervised clustering based on illness and recipe component
   3) Unsupervised clustering based on recipes to locate replacement ingredients or techniques
