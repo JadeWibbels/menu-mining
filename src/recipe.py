@@ -1,3 +1,5 @@
+import nltk
+
 class Recipe:
     def __init__(self, uid, r):
         self.measures = ['bunch', 'block', 'cup', 'cups', 'pinch', 'tablespoon', 'tablespoons', 'ounces', 'ounce', 'oz',
@@ -7,7 +9,7 @@ class Recipe:
         self.raw = r
         self.uid = uid
         self.shopping_list = []
-        self.instructions = r['instructions']
+        self.instructions = r['instructions'].lower().replace('adverstisement', '')
         self.ingredients = {}
         if 'title' in r:
             self.title = r['title'].split()
@@ -27,3 +29,5 @@ class Recipe:
             for i in item:
                 self.ingredients[i]={'qty': ' '.join(qty), 'notes': ' '.join(notes)}
             self.shopping_list.append(' '.join(item))
+            
+            
