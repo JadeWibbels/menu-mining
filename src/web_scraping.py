@@ -9,7 +9,7 @@ class Digger:
     def __init__(self, countries):
         self.header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'}
         self.countries = countries
-        self.data_leak_words = ["b'", 'b"', 'a', 'the', 'and', 'for', 'about', 'to', 'in', 'is', 'or', 'so', 'i', 'greek', 'german', 'filipino', 'indian', 'indonesian', 'cajun', 'carribean', 'italian', 'mexican', 'chinese', 'thai', 'vietnamese', 'french', 'japanese', 'irish', 'koren', 'russian', '(tm)', 'categories', 'v8.04', 'recipe', 'via', 'meal master', 'mealmaster', 'v8.03', 'v8.02', 'v8.01', 'exported', 'from', 'mastercook', 'title', 'philippine', 'philippina']
+        self.data_leak_words = ["b'", 'b"', 'a', 'the', 'and', 'for', 'about', 'to', 'in', 'is', 'or', 'so', 'i', 'greek', 'german', 'filipino', 'indian', 'indonesian', 'cajun', 'carribean', 'italian', 'mexican', 'chinese', 'thai', 'vietnamese', 'french', 'japanese', 'irish', 'koren', 'russian', '(tm)', 'categories', 'v8.04', 'recipe', 'via', 'meal master', 'mealmaster', 'v8.03', 'v8.02', 'v8.01', 'exported', 'from', 'mastercook', 'title', 'philippine', 'philippina', 'v7.02\r', '\r']
 
     def dig_soup(self, c):
         print(c)
