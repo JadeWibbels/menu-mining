@@ -31,7 +31,7 @@ data_leak = frozenset(["b'", 'b"', 'a', 'at', 'the', 'and', 'for', 'about', 'to'
                        'appear', 'tray', 'home', 'revised', 'format', 'notes', 'preferrably', 'books', 'chantiles', 'source',
                        'liacouras', 'remaining', 'ingredients', 'mmfind','avanel', 'electric', 'company', 'serves 310', 
                        'serves', 'shared', 'cookery', 'classic', 'cuisine', 'compiled', 'fat', '0g', 'complete', 'farmhouse',
-                       'main', 'dish', 'old', 'clipping', 'heat',
+                       'main', 'dish', 'old', 'clipping', 'heat', 'advertisement',
                        
                        'est', 'brrb11a', 'prodigy', 'com', 'sales', 'agency', 'harono', 'phone 206 774', 'phone',
                        'ima', 'infomail', 'cgibas', 'wraightc3','uiuc', 'edu', 'inc', 'ucbvax', 'mtxinu', 'excelan', 'aviva',
