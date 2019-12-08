@@ -33,9 +33,9 @@ class Cuisine:
         for filename in data_sets:
             with open(filename, 'r') as f:
                 all_recipes = json.load(f)
-        cleaned_ar = self.clean_recipes(all_recipes)
-        self.complete_countries(cleaned_ar)
-        self.build_cookbook()
+            cleaned_ar = self.clean_recipes(all_recipes)
+            self.complete_countries(cleaned_ar)
+            self.build_cookbook()
         
     def complete_countries(self, cleaned_ar):
         for r in range(len(cleaned_ar)-1):
