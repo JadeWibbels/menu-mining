@@ -1,9 +1,11 @@
 # menu-mining
-Data Mining project Fall 2019. Looking at connections between regional recipes and regional health.
+Data Mining project Fall 2019. Looking at connections between regional recipes and regional health. The jupyer notebooks in diseases folder contain the pipeline for disease processing and Data Exploration contains the walk through for results.
 
 List of public food/recipe related data sets: https://hackernoon.com/machine-learning-food-datasets-collection-db21e38ea225
 
 Recipes https://eightportions.com/datasets/Recipes/#fn:1
+
+web_scrape.json was created by scraping https://recipesource.com/ with src/web_scraping.py
 
 WHO data https://www.who.int/healthinfo/global_burden_disease/estimates/en/index1.html
 
@@ -22,18 +24,29 @@ Can we find foods/techniques that have low negative impacts and offer replacemen
 
 ## Steps:
 
+  ### Data Gathering:
+  The src/web_scraping.py file contains the class we created to use Beautiful Soup to scrape https://recipesource.com/
+
   ### Preprocessing:
   
-  1) Recipes: combining multiple data sets, cleaning and gathering important characteristics
+  1) Recipes: combining multiple data sets, cleaning, looking for data leaks and stop words, tagging and important characteristics extraction.
   2) Countries: clean for illness/mortality that can be tied to food specifically, verifying we have enough countries with recipes to be meaningful, combine over multiple years to try to mitigate potential globalization impact(?)
     
-  ### Data Mining
-   1) Organize recipes with: Ingredients (including quantity), Cooking Instructions, Nationality (will use classification)
-   2) Organize Countries with population, illnesses, Cause of Death, Imports and Exports
-   3) Look for links between high occurances of foods or cooking types, heats etc with certain illnesses
-   4) Look for potential low risk replacement foods/processes by finding similar types of recipes with different ingredients.
+  ### Classificaion step 1
+   1) Organized recipes with: Ingredients (including quantity), Cooking Instructions, Nationality classified using a SVM. (src/classifiers/svm)
+   
+  ### Data Analysis:
+   3) By linking terms to illnesses and removing nationalities, look for links between high occurances of foods or cooking types, heats etc with certain illnesses
+   
+  ### Classification step 2
+   1) Classify likely illnesses by recipe terms. We tried both random forest and Logistic Regression One vs Rest to complete this multi label classification. src/classifiers/random_forest and src/classifiers/OVR 
+  
+   
    
 ## Tools:
-  1) NLP classification: region
-  2) Unsupervised clustering based on illness and recipe component
-  3) Unsupervised clustering based on recipes to locate replacement ingredients or techniques
+  1) sklearn NLP classification: including vectorizers, SVM, OVR and random forest
+  2) Graphing tools: Networkx
+  3) Visualization tools: Matplotlib and sns
+  4) Data Management: pandas and json
+  5) web scraping: beautiful soup
+  
